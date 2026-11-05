@@ -25,11 +25,13 @@
   var drawer = document.getElementById("drawer");
   var overlay = document.getElementById("overlay");
   var closeBtn = document.querySelector(".drawer-close");
+  var mobileCta = document.querySelector(".mobile-cta");
   function setDrawer(open){
     if(!drawer) return;
     drawer.classList.toggle("open", open);
     if(overlay) overlay.classList.toggle("show", open);
     if(toggle){ toggle.classList.toggle("open", open); toggle.setAttribute("aria-expanded", open ? "true" : "false"); }
+    if(mobileCta) mobileCta.style.visibility = open ? "hidden" : "";
     document.body.style.overflow = open ? "hidden" : "";
   }
   if(toggle) toggle.addEventListener("click", function(){ setDrawer(!drawer.classList.contains("open")); });
@@ -49,17 +51,26 @@
   });
 
   /* Desktop dropdowns: click toggles (hover handled in CSS) */
-  document.querySelectorAll(".has-drop > button").forEach(function(btn){
+  var dropBtns = document.querySelectorAll(".has-drop > button");
+  function closeDrops(){
+    document.querySelectorAll(".has-drop.open").forEach(function(x){
+      x.classList.remove("open");
+      var b = x.querySelector("> button");
+      if(b) b.setAttribute("aria-expanded", "false");
+    });
+  }
+  dropBtns.forEach(function(btn){
     btn.addEventListener("click", function(e){
       e.stopPropagation();
       var li = btn.parentElement;
       var wasOpen = li.classList.contains("open");
-      document.querySelectorAll(".has-drop.open").forEach(function(x){ x.classList.remove("open"); });
-      if(!wasOpen) li.classList.add("open");
+      closeDrops();
+      if(!wasOpen){ li.classList.add("open"); btn.setAttribute("aria-expanded", "true"); }
     });
   });
-  document.addEventListener("click", function(){
-    document.querySelectorAll(".has-drop.open").forEach(function(x){ x.classList.remove("open"); });
+  document.addEventListener("click", closeDrops);
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){ closeDrops(); setDrawer(false); }
   });
 
   /* FAQ accordion */
@@ -127,13 +138,20 @@
     window.scrollTo({top:0, behavior: reduceMotion ? "auto" : "smooth"});
   });
 
-  /* Active nav highlighting */
+  /* Active nav highlighting — incl. Solutions parent when a child page is open */
   var page = (location.pathname.split("/").pop() || "index.html").split("?")[0].split("#")[0];
   if(!page) page = "index.html";
+  var solutionPages = ["white-label.html","turnkey.html","prop-trading.html","crm.html","liquidity.html","payments.html"];
   document.querySelectorAll(".main-nav a, .drawer a").forEach(function(a){
     var href = a.getAttribute("href");
     if(href === page){ a.classList.add("active"); }
   });
+  if(solutionPages.indexOf(page) !== -1){
+    var solBtn = document.querySelector(".has-drop > button");
+    if(solBtn) solBtn.classList.add("active");
+    var solToggle = document.querySelector(".drawer .sub-toggle");
+    if(solToggle) solToggle.classList.add("active");
+  }
 
   /* Contact / quote form: client-side validation, success state, nothing sent */
   var form = document.getElementById("contact-form");

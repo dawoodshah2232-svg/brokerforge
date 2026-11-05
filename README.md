@@ -16,8 +16,10 @@ no code, text, image, logo or branding was copied from it.
 - **Brand:** logo in `assets/logo/` — `logo.svg` (dark lockup), `logo-light.svg`
   (light lockup), `logo-mark.svg`, `favicon.svg`, `logo-512.webp`.
   Palette: deep navy `#081226`, teal `#00D1B2`, gold `#F5B544`.
-- **Images:** AI-generated, in `assets/img/` — Dubai trading office, platform
-  dashboard, support team, Dubai skyline.
+- **Images:** 10 AI-generated photorealistic trading photos in `assets/img/` —
+  multi-monitor trading desks, laptop terminals, trading floor, phone trader,
+  Dubai office, CRM desk, prop trader, headset support team, chart close-ups,
+  brokerage team. No SVG art used as imagery.
 - **Forms:** contact/quote forms validate client-side and show a success state;
   they send/store nothing (no backend). Real replies go via phone/WhatsApp.
 - **Disclaimer:** BrokerForge is a technology provider only. It does not offer

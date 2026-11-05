@@ -10,13 +10,12 @@
       <stop offset="1" stop-color="#E8892B"/>
     </linearGradient>
   </defs>
-  <rect x="2" y="2" width="92" height="92" rx="22" fill="url(#bf-g)"/>
-  <rect x="2" y="2" width="92" height="92" rx="22" fill="none" stroke="#ffffff" stroke-opacity=".25" stroke-width="2"/>
-  <rect x="22" y="56" width="11" height="18" rx="3" fill="#ffffff" opacity=".92"/>
-  <rect x="38" y="46" width="11" height="28" rx="3" fill="#ffffff" opacity=".95"/>
-  <rect x="54" y="36" width="11" height="38" rx="3" fill="#ffffff"/>
-  <path d="M68 24 L78 24 L78 34" fill="none" stroke="url(#bf-gold)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M78 24 L58 44" fill="none" stroke="url(#bf-gold)" stroke-width="6" stroke-linecap="round"/>
-  <text x="112" y="60" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="38" font-weight="800" letter-spacing="-1" fill="#FFFFFF">Broker<tspan fill="#00D1B2">Forge</tspan></text>
-  <text x="114" y="82" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="3.5" fill="#9FB3C8">LAUNCH YOUR BROKERAGE</text>
+  <rect x="2" y="2" width="92" height="92" rx="20" fill="url(#bf-g)"/>
+  <rect x="2" y="2" width="92" height="92" rx="20" fill="none" stroke="#ffffff" stroke-opacity=".25" stroke-width="2"/>
+  <rect x="21" y="58" width="12" height="16" rx="3" fill="#ffffff" opacity=".92"/>
+  <rect x="38" y="48" width="12" height="26" rx="3" fill="#ffffff" opacity=".95"/>
+  <rect x="55" y="38" width="12" height="36" rx="3" fill="#ffffff"/>
+  <path d="M70 22 L80 22 L80 32" fill="none" stroke="url(#bf-gold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 22 L58 44" fill="none" stroke="url(#bf-gold)" stroke-width="7" stroke-linecap="round"/>
+  <text x="110" y="62" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="38" font-weight="800" letter-spacing="-1" fill="#FFFFFF">Broker<tspan fill="#00D1B2">Forge</tspan></text>
 </svg>
