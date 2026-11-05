@@ -1,8 +1,9 @@
-# BrokerForge — Launch your brokerage in weeks
+# Forex Setup — Your forex brokerage, set up and live in weeks
 
-**BrokerForge** is a clean-room broker white-label website: MT5-type white label,
-trading platforms, forex CRM, liquidity, payments & KYC, turnkey brokerage and
-prop-trading solutions — all freshly written, with a new brand, new design and
+**Forex Setup** is a clean-room broker white-label website: MT5-type white label,
+trading platforms, forex CRM, liquidity, payments & KYC, turnkey brokerage,
+prop-trading and launch services (company formation, brokerage website, PSP
+integration) — all freshly written, with a new brand, new design and
 new copy. It is inspired by the structure of a reference white-label site, but
 no code, text, image, logo or branding was copied from it.
 
@@ -10,19 +11,25 @@ no code, text, image, logo or branding was copied from it.
 - **Contact:** +971 52 322 2946 — [WhatsApp](https://wa.me/971523222946)
 - **Stack:** static HTML/CSS/JS only. No framework, no backend, no build step.
   Shared `assets/css/style.css` + `assets/js/main.js` on every page.
-- **Pages (16):** Home, Solutions, White Label, Platforms, CRM, Liquidity,
-  Payments, Pricing, Turnkey, Prop Trading, About, Blog, Contact, FAQ,
+- **Pages (17):** Home, Solutions, White Label, Platforms, CRM, Liquidity,
+  Payments, Pricing, Turnkey, Prop Trading, Launch Services, About, Blog, Contact, FAQ,
   Privacy, Terms — plus `sitemap.xml` and `robots.txt`.
 - **Brand:** logo in `assets/logo/` — `logo.svg` (dark lockup), `logo-light.svg`
-  (light lockup), `logo-mark.svg`, `favicon.svg`, `logo-512.webp`.
+  (light lockup), `logo-dark.svg` (single-colour navy), `logo-mark.svg` (gear + rising-arrow mark),
+  `favicon.svg`, `logo-512.webp` (512px raster of the mark).
   Palette: deep navy `#081226`, teal `#00D1B2`, gold `#F5B544`.
-- **Images:** 10 AI-generated photorealistic trading photos in `assets/img/` —
+- **Images:** 13 photorealistic trading photos in `assets/img/` —
   multi-monitor trading desks, laptop terminals, trading floor, phone trader,
   Dubai office, CRM desk, prop trader, headset support team, chart close-ups,
-  brokerage team. No SVG art used as imagery.
+  brokerage team, plus office handshake, company-setup office and prop-firm
+  dashboard. No SVG art used as imagery.
+- **Tools (client-side only, in `assets/js/main.js`):** simulated market ticker,
+  launch quote calculator (estimates only, WhatsApp send), platform comparison,
+  6-step launch stepper, package selector with contact prefill, solutions
+  search/filter, FAQ search, contact form with WhatsApp fallback.
 - **Forms:** contact/quote forms validate client-side and show a success state;
   they send/store nothing (no backend). Real replies go via phone/WhatsApp.
-- **Disclaimer:** BrokerForge is a technology provider only. It does not offer
+- **Disclaimer:** Forex Setup is a technology provider only. It does not offer
   brokerage or investment services and does not hold client funds.
 
 ## Local preview

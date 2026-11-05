@@ -1,4 +1,4 @@
-/* BrokerForge — shared stylesheet. Apple font stack only. No external fonts. */
+/* Forex Setup — shared stylesheet. Apple font stack only. No external fonts. */
 :root{
   --ink:#081226; --ink2:#0d1d3a; --teal:#00d1b2; --teal-dark:#0aa8a0;
   --gold:#f5b544; --bg:#f6f8fb; --text:#16233a; --muted:#5b6b82;
@@ -310,3 +310,76 @@ table.compare tr:last-child td{border-bottom:0}
   .reveal{opacity:1;transform:none}
   .drawer>*{opacity:1;transform:none}
 }
+
+/* ---- Forex Setup upgrade: ticker, stepper, calculator, compare, search ---- */
+.ticker{display:flex;gap:28px;align-items:center;overflow-x:auto;background:#0d1d3a;color:#dbe4f0;padding:10px 20px;font-size:.9rem;white-space:nowrap;scrollbar-width:none}
+.ticker::-webkit-scrollbar{display:none}
+.ticker-item b{color:#fff;font-weight:700;margin-right:6px}
+.ticker-item em{font-style:normal;font-weight:700}
+.ticker-item em.up{color:#00d1b2}
+.ticker-item em.down{color:#ff7a7a}
+.ticker-note{margin-left:auto;color:#8fa1bd;font-size:.82rem;flex:none}
+.figcap{font-size:.85rem;color:var(--muted);margin-top:10px}
+.photo-frame img{border-radius:20px;box-shadow:var(--shadow)}
+/* Stepper */
+.launch-stepper{max-width:960px;margin:0 auto}
+.stepper-btns{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.stepper-btn{border:1px solid var(--line);background:#fff;border-radius:14px;padding:14px 10px;cursor:pointer;font:inherit;text-align:left;transition:transform .2s var(--ease),box-shadow .2s,border-color .2s}
+.stepper-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.stepper-btn:active{transform:scale(.97)}
+.stepper-btn .n{width:32px;height:32px;border-radius:50%;background:#eef2f7;color:var(--ink);font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:8px;font-size:.95rem}
+.stepper-btn.active{border-color:var(--teal);box-shadow:var(--shadow)}
+.stepper-btn.active .n{background:var(--teal);color:#04231d}
+.stepper-btn span{display:block;font-weight:700;font-size:.88rem;line-height:1.3;color:var(--ink)}
+.stepper-progress{height:4px;background:var(--line);border-radius:4px;margin:20px 0;overflow:hidden}
+.stepper-progress i{display:block;height:100%;width:0;background:var(--teal);border-radius:4px;transition:width .4s var(--ease)}
+.stepper-detail{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.stepper-detail h3{margin-bottom:.4rem}
+.stepper-detail p{color:var(--muted);margin-bottom:.4rem}
+.stepper-when{display:inline-block;font-weight:800;font-size:.85rem;color:var(--teal-dark);background:#e6faf6;border-radius:999px;padding:4px 12px}
+/* Quote calculator */
+.quote-calc{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:var(--shadow);max-width:860px;margin:0 auto}
+.quote-calc .field select{max-width:420px}
+.calc-checks{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 20px}
+.calc-checks label{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:999px;padding:10px 16px;font-weight:600;cursor:pointer;transition:border-color .2s,background .2s}
+.calc-checks label:has(input:checked){border-color:var(--teal);background:#e6faf6}
+.calc-checks input{accent-color:var(--teal-dark);width:18px;height:18px}
+.calc-result{font-size:1.25rem;font-weight:800;color:var(--ink);margin:8px 0}
+.calc-note{font-size:.88rem;color:var(--muted)}
+.calc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+/* Platform compare */
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+.chip-btn{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 18px;font:inherit;font-weight:700;cursor:pointer;color:var(--ink);transition:border-color .2s,background .2s}
+.chip-btn:hover{border-color:var(--teal)}
+.chip-btn.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.compare-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:24px}
+.compare-card{border:1.5px solid var(--line);border-radius:14px;padding:16px;cursor:pointer;background:#fff;transition:border-color .2s,box-shadow .2s}
+.compare-card:hover{border-color:var(--teal)}
+.compare-card.picked{border-color:var(--teal);box-shadow:var(--shadow);background:#eefaf7}
+.compare-card input{accent-color:var(--teal-dark);width:18px;height:18px;margin-bottom:8px}
+.compare-card b{display:block;color:var(--ink)}
+.compare-card span{font-size:.88rem;color:var(--muted)}
+/* Package selector */
+.pkg-toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:4px;background:#fff;margin-bottom:24px}
+.pkg-toggle button{border:0;background:none;font:inherit;font-weight:700;padding:9px 18px;border-radius:999px;cursor:pointer;color:var(--ink)}
+.pkg-toggle button.active{background:var(--ink);color:#fff}
+.price-card.selected{border-color:var(--teal);box-shadow:var(--shadow)}
+.pkg-mode{font-size:.88rem;color:var(--muted);font-weight:600}
+/* Search */
+.search-wrap{max-width:640px;margin:0 auto 8px;text-align:center}
+.search-input{width:100%;min-height:52px;padding:12px 18px;border:1.5px solid var(--line);border-radius:999px;font:inherit;color:var(--text);background:#fff}
+.search-input:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+.search-count{font-size:.9rem;color:var(--muted);margin-top:10px}
+.no-results{display:none;text-align:center;color:var(--muted);padding:32px 0}
+.package-note{display:none;background:#e6faf6;border:1px solid #bfe9df;border-radius:12px;padding:14px 18px;margin-bottom:20px;font-weight:600;color:var(--ink)}
+@media (max-width:1024px){.compare-cards{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:768px){
+  .stepper-btns{grid-template-columns:repeat(2,1fr)}
+  .compare-cards{grid-template-columns:repeat(2,1fr)}
+  .quote-calc{padding:24px}
+}
+
+/* Audit fixes: press feedback on all tappable controls; themed browser surfaces */
+.chip-btn:active,.compare-card:active,.pkg-toggle button:active{transform:scale(.97)}
+::selection{background:#00d1b2;color:#04231d}
+:focus-visible{outline:2px solid #0aa8a0;outline-offset:2px}
